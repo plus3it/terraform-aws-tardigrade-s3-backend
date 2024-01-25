@@ -9,12 +9,12 @@ variable "backend_config" {
       block_public_policy     = optional(bool, true)
       ignore_public_acls      = optional(bool, true)
       restrict_public_buckets = optional(bool, true)
-    }))
+    }), {})
     server_side_encryption_configuration = optional(object({
       bucket_key_enabled = optional(bool, true)
       sse_algorithm      = optional(string, "aws:kms")
       kms_master_key_id  = optional(string)
-    }))
+    }), {})
     dynamodb_table = object({
       name                        = string
       deletion_protection_enabled = optional(bool, true)
