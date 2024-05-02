@@ -4,6 +4,9 @@ variable "backend_config" {
     bucket        = string
     force_destroy = optional(bool, true)
     versioning    = optional(string, "Enabled")
+    policy = optional(object({
+      json = string
+    }))
     public_access_block = optional(object({
       block_public_acls       = optional(bool, true)
       block_public_policy     = optional(bool, true)
