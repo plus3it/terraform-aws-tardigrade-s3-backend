@@ -6,7 +6,9 @@ module "state_bucket" {
 
   public_access_block = var.backend_config.public_access_block
 
-  policy = {
+  server_side_encryption_configuration = var.backend_config.server_side_encryption_configuration
+
+  policy = var.backend_config.policy != null ? var.backend_config.policy : {
     json = jsonencode({
       "Version" : "2012-10-17",
       "Statement" : [
@@ -51,10 +53,6 @@ module "state_bucket" {
       ]
     })
   }
-
-
-  server_side_encryption_configuration = var.backend_config.server_side_encryption_configuration
-
 }
 
 resource "aws_dynamodb_table" "this" {
