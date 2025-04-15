@@ -24,5 +24,10 @@ variable "backend_config" {
       billing_mode                = optional(string, "PAY_PER_REQUEST")
     })
   })
+}
 
+variable "tags" {
+  description = "The tags applied to the bucket"
+  type        = map(string)
+  default     = {}
 }
