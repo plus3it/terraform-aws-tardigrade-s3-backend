@@ -23,11 +23,6 @@ variable "backend_config" {
       deletion_protection_enabled = optional(bool, true)
       billing_mode                = optional(string, "PAY_PER_REQUEST")
     })
+    tags = optiona(map(string))
   })
-}
-
-variable "tags" {
-  description = "The tags applied to the bucket"
-  type        = map(string)
-  default     = {}
 }
