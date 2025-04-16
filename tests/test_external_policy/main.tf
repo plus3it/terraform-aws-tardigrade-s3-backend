@@ -10,6 +10,10 @@ module "state_bucket" {
 
       deletion_protection_enabled = false
     }
+
+    tags = {
+      environment = "testing"
+    }
   }
 }
 
