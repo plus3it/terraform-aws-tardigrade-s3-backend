@@ -23,6 +23,6 @@ variable "backend_config" {
       deletion_protection_enabled = optional(bool, true)
       billing_mode                = optional(string, "PAY_PER_REQUEST")
     })
-    tags = optiona(map(string))
+    tags = optional(map(string))
   })
 }
