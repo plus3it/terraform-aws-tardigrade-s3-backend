@@ -3,7 +3,7 @@ module "state_bucket" {
   bucket        = var.backend_config.bucket
   force_destroy = var.backend_config.force_destroy
   versioning    = var.backend_config.versioning
-  tags          = var.tags
+  tags          = var.backend_config.tags
 
   public_access_block = var.backend_config.public_access_block
 
