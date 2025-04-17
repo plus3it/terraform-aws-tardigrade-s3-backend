@@ -66,6 +66,8 @@ resource "aws_dynamodb_table" "this" {
     name = "LockID"
     type = "S"
   }
+
+  tags = var.backend_config.tags
 }
 
 data "aws_caller_identity" "current" {}
