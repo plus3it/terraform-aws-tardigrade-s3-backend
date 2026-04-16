@@ -1,5 +1,5 @@
 module "state_bucket" {
-  source        = "git::https://github.com/plus3it/terraform-aws-tardigrade-s3-bucket.git?ref=5.0.0"
+  source        = "git::https://github.com/plus3it/terraform-aws-tardigrade-s3-bucket.git?ref=5.2.0"
   bucket        = var.backend_config.bucket
   force_destroy = var.backend_config.force_destroy
   versioning    = var.backend_config.versioning
