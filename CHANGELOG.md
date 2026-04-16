@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+### [1.2.3](https://github.com/plus3it/terraform-aws-tardigrade-s3-backend/releasestag/1.2.3)
+
+**Released**:  2026.04.16
+
+**Summary**:
+
+*   Updates S3 bucket module version to 5.2.0
+
 ### [1.2.2](https://github.com/plus3it/terraform-aws-tardigrade-s3-backend/releasestag/1.2.2)
 
 **Released**:  2026.04.16
