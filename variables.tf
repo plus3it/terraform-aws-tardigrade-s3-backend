@@ -14,9 +14,10 @@ variable "backend_config" {
       restrict_public_buckets = optional(bool, true)
     }), {})
     server_side_encryption_configuration = optional(object({
-      bucket_key_enabled = optional(bool, true)
-      sse_algorithm      = optional(string, "aws:kms")
-      kms_master_key_id  = optional(string)
+      blocked_encryption_types = optional(list(string), ["SSE-C"])
+      bucket_key_enabled       = optional(bool, true)
+      kms_master_key_id        = optional(string)
+      sse_algorithm            = optional(string, "aws:kms")
     }), {})
     dynamodb_table = object({
       name                        = string
